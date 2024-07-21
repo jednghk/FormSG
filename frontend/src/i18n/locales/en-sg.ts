@@ -11,14 +11,18 @@ import { FallbackTranslation } from './types'
 export const enSG: FallbackTranslation = {
   translation: {
     features: {
-      navbar,
+      adminForm: {
+        sidebar: {
+          fields,
+          headerAndInstructions,
+          logic,
+          thankYou,
+        },
+        navbar,
+      },
       common,
       login,
       publicForm,
-      fields,
-      headerAndInstructions,
-      logic,
-      thankYou,
     },
   },
 }
