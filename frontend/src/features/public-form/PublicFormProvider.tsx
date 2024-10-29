@@ -456,9 +456,7 @@ export const PublicFormProvider = ({
         duration: null,
         status: 'warning',
         isClosable: true,
-        description: t('features.publicForm.errors.verifiedFieldExpired', {
-          count: numVerifiable,
-        }),
+        description: t('features.publicForm.errors.verifiedFieldExpired'),
       })
     }
   }, [data?.form.form_fields, toast, vfnToastIdRef, t])
@@ -872,7 +870,7 @@ export const PublicFormProvider = ({
     ],
   )
 
-  useTimeout(generateVfnExpiryToast, expiryInMs)
+  useTimeout(generateVfnExpiryToast, 5000)
 
   const isAuthRequired = useMemo(
     () =>
