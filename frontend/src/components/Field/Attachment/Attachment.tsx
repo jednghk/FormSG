@@ -12,7 +12,6 @@ import {
 } from '@chakra-ui/react'
 import imageCompression from 'browser-image-compression'
 import omit from 'lodash/omit'
-import simplur from 'simplur'
 
 import { MB } from '~shared/constants/file'
 
@@ -176,14 +175,11 @@ export const Attachment = forwardRef<AttachmentProps, 'div'>(
             const numInvalidFiles = invalidFilesInZip.length
             // There are invalid files, return error.
             if (numInvalidFiles !== 0) {
-              const hiddenQty = [numInvalidFiles, null]
               const stringOfInvalidExtensions = invalidFilesInZip.join(', ')
               return onError?.(
-                simplur(
-                  t(
-                    'features.adminForm.sidebar.fields.imageAttachment.error.zipFileInvalidType',
-                    { hiddenQty, stringOfInvalidExtensions },
-                  ),
+                t(
+                  'features.adminForm.sidebar.fields.imageAttachment.error.zipFileInvalidType',
+                  { stringOfInvalidExtensions },
                 ),
               )
             }

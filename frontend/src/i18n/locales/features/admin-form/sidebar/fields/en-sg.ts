@@ -135,18 +135,18 @@ export const enSG: Fields = {
     fileUploaderLink: 'Choose file',
     dragAndDrop: ' or drag and drop here',
     dragActive: 'Drop the file here',
-    maxFileSize: 'Maximum file size: {{readableMaxSize}}',
+    maxFileSize: 'Maximum file size: {readableMaxSize}',
     ariaLabelRemove: 'Click to remove file',
     error: {
       fileEmpty:
         'You have uploaded an empty file, please upload a valid attachment',
       fileTooLarge:
-        'You have exceeded the limit, please upload a file below {{readableMaxSize}}',
+        'You have exceeded the limit, please upload a file below {readableMaxSize}',
       fileInvalidType:
-        "Your file's extension ending in *{{fileExt}} is not allowed",
+        "Your file's extension ending in *{fileExt} is not allowed",
       tooManyFiles: 'You can only upload a single file in this input',
       zipFileInvalidType:
-        'The following file {{hiddenQty}} extension[|s] in your zip file {{hiddenQty}} [is|are] not valid: {{stringOfInvalidExtensions}}',
+        'The following file extensions in your zip file are not valid: {stringOfInvalidExtensions}',
       zipParsing: 'An error has occurred whilst parsing your zip file',
     },
   },
